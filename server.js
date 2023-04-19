@@ -16,7 +16,8 @@ api.use(cors());
 api.use(express.urlencoded());
 api.use(express.json());
 
-api.use('/api/produtorio', require('./controllers/api/produtorio.controller'));
+api.use('/api/produtorio/recursivo', require('./controllers/api/prod.recursivo.controller'));
+api.use('/api/produtorio/iterativo', require('./controllers/api/prod.iterativo.controller'));
 
 // process.env.PORT é uma variável injetada pelo Azure Web App. Caso ela não exista, será utilizada a porta fixa (6000)
 var apiPort = process.env.PORT || config.port;
